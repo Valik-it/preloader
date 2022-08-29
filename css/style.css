@@ -1,0 +1,142 @@
+/*import Poppins font*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+
+
+.preloader{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	z-index: 2;
+	transition: 1s all;
+	opacity: 1;
+	visibility: visible;
+}
+
+	.loader{
+		width: 75px;
+		height: 75px;
+		border: 10px solid white;
+		border-radius: 50%;
+		border-top-color: blue; /*Here you can change the color*/
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		animation: 2s loader infinite linear;
+	}
+
+
+.done{
+opacity: 0;
+visibility: hidden;
+}
+
+/*animate our loader*/
+@keyframes loader{
+	from{
+				transform: translate(-50%, -50%) rotate(0deg);
+
+	}
+	to{
+				transform: translate(-50%, -50%) rotate(360deg);
+
+	}
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+	color: white;
+	font-size: 50px;
+}
+
+
+.row:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.row { display: inline-block; }
+
+* html .row { height: 1%; }
+.row { display: block; }
+
+
+h1{
+	font-size: 5rem;
+	color: #000;
+	text-align: center;
+	justify-content: center;
+	padding-top: 200px;
+}
+
+.touch{
+	margin: 0 auto;
+	display: block;
+	width: 200px;
+	height: 100px;
+	border-radius: 15px;
+	background: #3490DE;
+}
+
+.touch p{
+	color: blue;
+	font-size: 30px;
+	margin: 10px;
+}
+
+.touch:hover{
+	margin: 0 auto;
+	display: block;
+	width: 200px;
+	height: 100px;
+	border-radius: 15px;
+	background: red;
+}
+
+
+/*Here i make this Web site responsive*/
+@media (max-width: 1000px){
+	.wrapper{
+		margin-top: 300px;
+	}
+	h1{
+		padding: 10px;
+		font-size: 1.5rem;
+		text-align: center;
+		justify-content: center;
+	}
+	.touch{
+		margin: 0 auto;
+		display: block;
+		width: 100px;
+		height: 50px;
+		border-radius: 7.5px;
+		background: #3490DE;
+
+	}
+	.touch p{
+		color: blue;
+		font-size: 20px;
+		margin: 3px;
+	}
+	.touch:hover{
+		margin: 0 auto;
+		display: block;
+		width: 100px;
+		height: 50px;
+		border-radius: 7.5px;
+		background: red;
+	}
+}
